@@ -3,6 +3,10 @@ const factorial = require('../factorial');
 
 describe('Tests on the factorial function', () => {
 
+    it('should get factorial of a negative number as NaN', () => {
+        assert.equal(factorial(-5), 'NaN')
+    });
+
     it('should get factorial of 0 as 1', () => {
         assert.equal(factorial(0), 1)
     });
@@ -23,4 +27,7 @@ describe('Tests on the factorial function', () => {
         assert.equal(factorial(5), 120)
     });
 
+    it('should get factorial of 10 as 3628800', () => {
+        assert.equal(factorial(10), 3628800)
+    });
 });
