@@ -1,15 +1,28 @@
 function factorial(n) {
-        // base case
-    if (n == 0 || n == 1){
-        return 1;
-        //recursive method
-    }else if(n == 2){
-        return 2;
-    }else{
-        return n * factorial(n-1);
-    }
-}
+    //recursive method
+    // if (n < 0){
+    //     return 'NaN';
+    // }
+    // if (n == 0 || n == 1){
+    //     return 1;    
+    // }else{
+    //     return n * factorial(n-1);
+    // }
 
-    // Pair programming partner: ARAFAT MAGEZI
+    //Loop method or iterative method
+    if (n < 0)
+        return 'NaN';
+        
+    if (n == 0 || n == 1)
+        return 1;
     
-    module.exports = factorial;
+    for (var i = n - 1; i >= 1; i--) {
+        n *= i;
+    }
+    return n;
+}
+    
+module.exports = factorial;
+
+// Pair programming partner: ARAFAT MAGEZI
+    
